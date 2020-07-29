@@ -6,4 +6,4 @@ project(':app').name = 'Signal-Android'
 
 project(':libsignal-service').projectDir = file('libsignal/service')
 
-rootProject.name='app'
+rootProject.name='Signal'
