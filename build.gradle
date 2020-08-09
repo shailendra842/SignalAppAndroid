@@ -15,7 +15,11 @@ subprojects {
         }
     }
 }
-
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
 task qa {
     group 'Verification'
     description 'Quality Assurance. Run before pushing.'

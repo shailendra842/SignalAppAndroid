@@ -5,7 +5,10 @@ import org.thoughtcrime.securesms.util.Hex;
 import org.whispersystems.signalservice.api.kbs.HashedPin;
 import org.whispersystems.signalservice.api.kbs.KbsData;
 import org.whispersystems.signalservice.api.kbs.MasterKey;
-
+import org.junit.Rule;
+import org.junit.After;
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
 import java.io.IOException;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -13,6 +16,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public final class PinHashing_hashPin_Test {
+  @Rule
+  public ReportHelper reportHelper = Factory.getReportHelper();
 
   @Test
   public void argon2_hashed_pin_password() throws IOException {
@@ -30,6 +35,7 @@ public final class PinHashing_hashPin_Test {
 
     String localPinHash = PinHashing.localPinHash(pin);
     assertTrue(PinHashing.verifyLocalPinHash(localPinHash, pin));
+    reportHelper.label("Step1");
   }
 
   @Test
@@ -48,6 +54,7 @@ public final class PinHashing_hashPin_Test {
 
     String localPinHash = PinHashing.localPinHash(pin);
     assertTrue(PinHashing.verifyLocalPinHash(localPinHash, pin));
+    reportHelper.label("Step1");
   }
 
   @Test
