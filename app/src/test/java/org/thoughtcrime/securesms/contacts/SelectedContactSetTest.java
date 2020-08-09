@@ -2,10 +2,6 @@ package org.thoughtcrime.securesms.contacts;
 
 import org.junit.Test;
 import org.thoughtcrime.securesms.recipients.RecipientId;
-import org.junit.Rule;
-import org.junit.After;
-import com.microsoft.appcenter.espresso.Factory;
-import com.microsoft.appcenter.espresso.ReportHelper;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
@@ -18,8 +14,8 @@ import static org.junit.Assert.assertTrue;
 public final class SelectedContactSetTest {
 
   private final SelectedContactSet selectedContactSet = new SelectedContactSet();
-  @Rule
-  public ReportHelper reportHelper = Factory.getReportHelper();
+
+
 
   @Test
   public void add_without_recipient_ids() {
@@ -106,9 +102,5 @@ public final class SelectedContactSetTest {
     assertEquals(2, selectedContactSet.remove(contact2Remove));
 
     assertThat(selectedContactSet.getContacts(), is(singletonList(contact2)));
-  }
-  @After
-  public void TearDown(){
-    reportHelper.label("Stopping App");
   }
 }
