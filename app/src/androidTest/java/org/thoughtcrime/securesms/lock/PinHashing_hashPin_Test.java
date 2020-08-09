@@ -97,4 +97,9 @@ public final class PinHashing_hashPin_Test {
     String localPinHash = PinHashing.localPinHash(pin);
     assertTrue(PinHashing.verifyLocalPinHash(localPinHash, pin));
   }
+  @After
+  public void TearDown() {
+    reportHelper.label("Stopping App");
+  }
+
 }
