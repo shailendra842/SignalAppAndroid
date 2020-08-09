@@ -1,3 +1,4 @@
+include ':espresso-test-extension-1.4'
 include ':app'
 include ':libsignal-service'
 include ':lintchecks'

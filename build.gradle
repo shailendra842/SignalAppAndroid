@@ -12,6 +12,9 @@ subprojects {
             tasks.withType(Javadoc) {
                 options.addStringOption('Xdoclint:none', '-quiet')
             }
+			repositories {
+				jcenter()
+			}
         }
     }
 }

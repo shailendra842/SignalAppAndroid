@@ -4,10 +4,16 @@ import org.junit.Test;
 import org.thoughtcrime.securesms.mediasend.OrderEnforcer;
 
 import java.util.concurrent.atomic.AtomicInteger;
-
+import org.junit.Rule;
+import org.junit.After;
+import com.microsoft.appcenter.espresso.*;
 import static junit.framework.Assert.assertEquals;
 
 public class OrderEnforcerTest {
+
+  @Rule
+  public com.microsoft.appcenter.espresso.ReportHelper rh= com.microsoft.appcenter.espresso.Factory.getReportHelper();
+//  public ReportHelper reportHelper = esp Factory.getReportHelper();
 
   @Test
   public void markCompleted_singleEntry() {
