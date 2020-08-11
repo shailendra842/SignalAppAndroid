@@ -1,6 +1,1 @@
 include ':app'
-include ':libsignal-service'
-include ':lintchecks'
-project(':libsignal-service').projectDir = file('libsignal/service')
-
-
