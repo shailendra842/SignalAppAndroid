@@ -97,7 +97,9 @@
                  tools:replace="android:allowBackup"
                  android:allowBackup="false"
                  android:theme="@style/TextSecure.LightTheme"
-                 android:largeHeap="true">
+                 android:largeHeap="true"
+                 android:fullBackupContent="@xml/appcenter_backup_rule"
+        >
 
     <meta-data
             android:name="com.google.android.geo.API_KEY"

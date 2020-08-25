@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "org.thoughtcrime.securesms",
+  "variantName": "playRelease",
+  "elements": [
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "arm64-v8a"
+        }
+      ],
+      "properties": [],
+      "versionCode": 6802,
+      "versionName": "6802",
+      "enabled": true,
+      "outputFile": "Signal-play-arm64-v8a-release-4.67.3.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86"
+        }
+      ],
+      "properties": [],
+      "versionCode": 6803,
+      "versionName": "6803",
+      "enabled": true,
+      "outputFile": "Signal-play-x86-release-4.67.3.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [],
+      "properties": [],
+      "versionCode": 6800,
+      "versionName": "6800",
+      "enabled": true,
+      "outputFile": "Signal-play-universal-release-4.67.3.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "x86_64"
+        }
+      ],
+      "properties": [],
+      "versionCode": 6804,
+      "versionName": "6804",
+      "enabled": true,
+      "outputFile": "Signal-play-x86_64-release-4.67.3.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "properties": [],
+      "versionCode": 6801,
+      "versionName": "6801",
+      "enabled": true,
+      "outputFile": "Signal-play-armeabi-v7a-release-4.67.3.apk"
+    }
+  ]
+}

@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 
+import com.microsoft.appcenter.analytics.Analytics;
+
 import org.thoughtcrime.securesms.dependencies.ApplicationDependencies;
 import org.thoughtcrime.securesms.jobmanager.JobTracker;
 import org.thoughtcrime.securesms.jobs.RefreshAttributesJob;
@@ -34,6 +36,8 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+
+import static com.microsoft.appcenter.analytics.Analytics.*;
 
 public final class PinState {
 
@@ -223,6 +227,7 @@ public final class PinState {
     SignalStore.kbsValues().setV2RegistrationLockEnabled(true);
 
     updateState(State.PIN_WITH_REGISTRATION_LOCK_ENABLED);
+    trackEvent("pin enabled ");
   }
 
   /**
@@ -341,6 +346,7 @@ public final class PinState {
 
     for (State state : allowed) {
       if (currentState == state) {
+        Analytics.trackEvent("allowed");
         return currentState;
       }
     }

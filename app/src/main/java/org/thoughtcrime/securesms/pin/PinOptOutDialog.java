@@ -6,6 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 
+import com.microsoft.appcenter.analytics.Analytics;
+
 import org.thoughtcrime.securesms.R;
 import org.thoughtcrime.securesms.logging.Log;
 import org.thoughtcrime.securesms.util.ThemeUtil;
@@ -14,6 +16,8 @@ import org.thoughtcrime.securesms.util.views.SimpleProgressDialog;
 import org.whispersystems.signalservice.internal.contacts.crypto.UnauthenticatedResponseException;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class PinOptOutDialog {
 
@@ -48,7 +52,9 @@ public final class PinOptOutDialog {
     dialog.setOnShowListener(dialogInterface -> {
       dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(ThemeUtil.getThemedColor(context, R.attr.dangerous_button_color));
     });
-
+      Map map = new HashMap();
+      map.put("PinOptOutDialog","this dailog show");
+      Analytics.trackEvent("Dialog show",map);
     dialog.show();
   }
 }

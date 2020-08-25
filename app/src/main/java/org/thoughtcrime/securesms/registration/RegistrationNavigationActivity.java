@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.api.Status;
+import com.microsoft.appcenter.analytics.Analytics;
 
 import org.greenrobot.eventbus.EventBus;
 import org.thoughtcrime.securesms.R;
@@ -30,6 +31,7 @@ public final class RegistrationNavigationActivity extends AppCompatActivity {
   public static Intent newIntentForNewRegistration(@NonNull Context context) {
     Intent intent = new Intent(context, RegistrationNavigationActivity.class);
     intent.putExtra(RE_REGISTRATION_EXTRA, false);
+    Analytics.trackEvent("newIntentForNewRegistration");
     return intent;
   }
 
@@ -43,6 +45,7 @@ public final class RegistrationNavigationActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_registration_navigation);
+    Analytics.trackEvent("RegistrationNavigationActivity");
     initializeChallengeListener();
   }
 
