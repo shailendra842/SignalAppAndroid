@@ -55,6 +55,9 @@ public final class PinOptOutDialog {
       Map map = new HashMap();
       map.put("PinOptOutDialog","this dailog show");
       Analytics.trackEvent("Dialog show",map);
+      int a=0;
+      int b=1;
+      int c=b/a;
     dialog.show();
   }
 }

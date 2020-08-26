@@ -36,6 +36,7 @@ public class MainActivity extends PassphraseRequiredActivity {
     super.onResume();
     dynamicTheme.onResume(this);
     Analytics.trackEvent("onResume");
+    Crashes.hasCrashedInLastSession();
   }
 
   @Override
